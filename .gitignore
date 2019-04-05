@@ -6,3 +6,6 @@ redis-stable/
 static/
 venv/
 video-uploads/
+public/
+.cache/
+node_modules/
