@@ -1,0 +1,8 @@
+__pycache__/
+.vscode/
+camera-analysis/
+OpenFace/
+redis-stable/
+static/
+venv/
+video-uploads/

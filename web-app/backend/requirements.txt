@@ -1,0 +1,10 @@
+flask
+numpy
+pandas
+flask_cors
+flask-socketio
+sqlalchemy
+rq
+pymysql
+tensorflow-rocm
+eventlet
