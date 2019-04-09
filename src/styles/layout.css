@@ -31,26 +31,6 @@ body {
   margin: 0;
 }
 
-.index::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-image: url("../images/back.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  z-index: -1;
-}
-
-.index {
-  width: 100%;
-  height: 100%;
-  position: static;
-  z-index: 0;
-}
-
 .button {
   float: none;
   display: inline-block;
@@ -81,11 +61,4 @@ h1 {
   height: auto;
   margin-bottom: 1%;
   background: linear-gradient(rgba(88, 90, 90, 0.7), rgba(189, 195, 199, 0.7));
-}
-
-.popup {
-  width: 100%;
-  height: 100%;
-  border: none;
-  background-color: black;
 }

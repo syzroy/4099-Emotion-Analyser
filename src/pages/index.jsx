@@ -1,9 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
-import "../styles/layout.css"
+import React from "react";
+import { Link } from "gatsby";
+import Image from "../components/Image";
+import "../styles/layout.css";
 
 const IndexPage = () => (
-  <section className={"index"}>
+  <section>
+    <Image />
     <div style={{ paddingTop: "20vh", paddingLeft: "10vw" }}>
       <h1>Emotion Analysis</h1>
     </div>
@@ -16,6 +18,6 @@ const IndexPage = () => (
       </Link>
     </div>
   </section>
-)
+);
 
-export default IndexPage
+export default IndexPage;
