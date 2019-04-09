@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 import {
   Paper,
   Card,
@@ -6,45 +6,45 @@ import {
   Typography,
   CardActions,
   Button,
-  withStyles,
-} from "@material-ui/core"
-import Axios from "axios"
+  withStyles
+} from "@material-ui/core";
+import Axios from "axios";
 
 const styles = {
   paper: {
     width: "50%",
     height: "50vh",
     overflowY: "auto",
-    backgroundColor: "transparent",
-  },
-}
+    backgroundColor: "transparent"
+  }
+};
 
 class ListTable extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      job_list: [],
-    }
+      job_list: []
+    };
   }
 
   componentWillMount() {
-    this.updateList()
-    this.timer = setInterval(() => this.updateList(), 5000)
+    this.updateList();
+    this.timer = setInterval(() => this.updateList(), 5000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer)
+    clearInterval(this.timer);
   }
 
   updateList = () => {
-    Axios.get("http://127.0.0.1:5000/list")
+    Axios.get("https://d35d20f1.ngrok.io/list")
       .then(res => {
-        this.setState({ job_list: res["data"] })
+        this.setState({ job_list: res["data"] });
       })
       .catch(err => {
-        console.log(err)
-      })
-  }
+        console.log(err);
+      });
+  };
 
   render() {
     return (
@@ -67,8 +67,8 @@ class ListTable extends Component {
           </Card>
         ))}
       </Paper>
-    )
+    );
   }
 }
 
-export default withStyles(styles)(ListTable)
+export default withStyles(styles)(ListTable);
