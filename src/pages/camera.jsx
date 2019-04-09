@@ -1,4 +1,3 @@
-import "./layout.css"
 import Grid from "@material-ui/core/Grid"
 import Button from "@material-ui/core/Button"
 
@@ -14,7 +13,7 @@ class CameraPage extends Component {
     this.promise = Promise.resolve(true)
     this.state = {
       promise: Promise.resolve(true),
-      socket: io.connect("https://8966c50b.ngrok.io"),
+      socket: io.connect("https://14180240.ngrok.io"),
       width: 0,
       height: 0,
       classification: {},
@@ -25,7 +24,6 @@ class CameraPage extends Component {
       console.log("connected")
     })
     this.state.socket.on("message", message => {
-      console.log(message)
       let data = JSON.parse(message[1])
       let regressionData = {}
       let classificationData = {}
@@ -44,18 +42,18 @@ class CameraPage extends Component {
     })
   }
 
-  componentDidMount() {
-    this.updateDimensions()
-    window.addEventListener("resize", this.updateDimensions)
-  }
+  // componentDidMount() {
+  //   this.updateDimensions()
+  //   window.addEventListener("resize", this.updateDimensions)
+  // }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions)
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("resize", this.updateDimensions)
+  // }
 
-  updateDimensions = () => {
-    this.setState({ width: window.innerWidth / 2, height: window.innerHeight })
-  }
+  // updateDimensions = () => {
+  //   this.setState({ width: window.innerWidth / 2, height: window.innerHeight })
+  // }
 
   setReference = webcam => {
     this.webcam = webcam

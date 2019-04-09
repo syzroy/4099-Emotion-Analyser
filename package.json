@@ -1,16 +1,16 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "front-emotion-analysis",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "The frontend of the web app for emotion analysis",
+  "version": "1.0.0",
+  "author": "Yizhe Sun <ys51@st-andrews.ac.uk>",
   "dependencies": {
-    "gatsby": "^2.3.5",
+    "gatsby": "2.3.14",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-manifest": "^2.0.26",
     "gatsby-plugin-offline": "^2.0.25",
-    "gatsby-plugin-react-helmet": "^3.0.11",
-    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-react-helmet": "3.0.12",
+    "gatsby-plugin-sharp": "2.0.32",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-sharp": "^2.1.17",
     "prop-types": "^15.7.2",
@@ -20,7 +20,9 @@
     "@material-ui/core": "^3.9.3",
     "react-webcam": "^1.1.1",
     "socket.io-client": "^2.2.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "axios": "0.18.0",
+    "reactjs-popup": "1.3.2"
   },
   "devDependencies": {
     "prettier": "^1.16.4"
@@ -36,12 +38,5 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
